@@ -5,7 +5,7 @@ LIFE = 6
 guess_word = random.choice(words)
 
 
-class TroikaIgrokov:
+class Game:
 
     def __init__(self, word):
         self._word = list(word)
@@ -32,7 +32,7 @@ class TroikaIgrokov:
 
 def choice_word(guess_word):
     print('Загадано слово, попробуй отгадай')
-    one = TroikaIgrokov(guess_word)
+    one = Game(guess_word)
     while LIFE != 0:
         letter = input('Введите возможную букву: ')
         print(one.bukva(letter.lower()))
